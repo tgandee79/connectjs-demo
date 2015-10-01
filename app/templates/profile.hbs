@@ -1,0 +1,53 @@
+<ol class="breadcrumb">
+  <li class="active">Profile</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class="card-img-top" src="http://placehold.it/300x300" width="100%" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">First Lastname</h4>
+                <p class="card-text">
+                    Freelance: Yes <br>
+                    Open to Job Offers: Yes
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <div class="row">
+                    <a href="#" {{action "sendMessage"}} class="m-x">Send Message</a>
+                </div>
+                <hr>
+                <div class="row">
+                    <a href="#" {{action "recommendUser"}} class="m-x">Recommend User</a>
+                </div>
+                <div class="row">
+                    <a href="#" {{action "ignoreUser"}} class="m-x">Ignore User</a>
+                </div>
+                <div class="row">
+                    <a href="#" {{action "blockUser"}} class="m-x">Block User</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class="card">
+            {{#link-to 'course'}}
+            <div class="card-block">
+                <h6>Class Taken</h6>
+                <hr>
+                <h4 class="card-title">Beginning iOS (iphone / ipad) with Swift</h4>
+                <h5 class="m-t-md">
+                    Calloway Gardens
+                    <div>
+                        <small>
+                            <em>05/05/15-05/12/15</em>
+                        </small>
+                    </div>
+                </h5>
+            </div>
+            {{/link-to}}
+        </div>
+    </div>
+</div>

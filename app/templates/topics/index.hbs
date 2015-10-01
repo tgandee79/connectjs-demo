@@ -1,0 +1,83 @@
+<ol class="breadcrumb">
+  <li class="active">Topics</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="#" {{action "filterCourse" true}} class="{{if filter active}}">My Courses</a>
+          </li>
+          <li class="list-group-item">
+            {{link-to 'Edit Material' 'courses.materials' }}
+          </li>
+          <li class="list-group-item">
+            <a href="#" {{action "filterCourse" false}} class="{{unless filter active}}">All Courses</a>
+          </li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item p-y-sm">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row row-xs-center">
+                <div class="col-xs-12 col-sm-9">
+                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    {{#link-to 'thread' class="btn btn-secondary btn-block"}}Unsubscribe{{/link-to}}
+                </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+</div>
+

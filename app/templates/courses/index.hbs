@@ -1,0 +1,37 @@
+<ol class="breadcrumb">
+  <li class="active">Courses</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="#" {{action "filterCourse" true}} class="{{if filter active}}">My Courses</a>
+          </li>
+          <li class="list-group-item">
+            {{link-to 'Edit Material' 'courses.materials' }}
+          </li>
+          <li class="list-group-item">
+            <a href="#" {{action "filterCourse" false}} class="{{unless filter active}}">All Courses</a>
+          </li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class="card">
+            {{#link-to 'course'}}
+                <div class="card-block">
+                    <h4 class="card-title">Course Title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            {{/link-to}}
+        </div>
+        <div class="card">
+            {{#link-to 'course'}}
+                <div class="card-block">
+                    <h4 class="card-title">Course Title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            {{/link-to}}
+        </div>
+    </div>
+</div>
+
