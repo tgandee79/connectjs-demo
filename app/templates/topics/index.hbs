@@ -5,13 +5,13 @@
     <div class="col-xs-12 col-md-4">
         <ul class="list-group">
           <li class="list-group-item">
-            <a href="#" {{action "filterCourse" true}} class="{{if filter active}}">My Courses</a>
+            <a href="#" {{action "filterCourse" true}} class="{{if courses.filter active}}">My Courses</a>
           </li>
           <li class="list-group-item">
             {{link-to 'Edit Material' 'courses.materials' }}
           </li>
           <li class="list-group-item">
-            <a href="#" {{action "filterCourse" false}} class="{{unless filter active}}">All Courses</a>
+            <a href="#" {{action "filterCourse" false}} class="{{unless courses.filter active}}">All Courses</a>
           </li>
         </ul>
     </div>
