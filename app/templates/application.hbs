@@ -2,7 +2,16 @@
     <div class="container">
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">&#9776;
         </button>
-        <a class="navbar-brand" href="#">Nerd Association</a>
+        {{#link-to 'login' class="navbar-brand"}}Nerd Association{{/link-to}}
+        <div class="dropdown navbar-brand pull-right">
+            <a data-target="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="http://placehold.it/30x30" alt="" class="img-circle">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                {{link-to "Profile" "profile" class="dropdown-item"}}
+                {{link-to "Settings" "settings.account" class="dropdown-item"}}
+            </div>
+        </div>
 
         <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
             <ul class="nav navbar-nav">
