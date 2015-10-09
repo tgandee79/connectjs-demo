@@ -6,13 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('listing');
-  this.route('detail', function() {
-    this.route('edit');
-  });
   this.route('login');
   this.route('course');
   this.route('courses', function() {
+    this.route('mine');
+    this.route('all');
     this.route('materials', function() {
       this.route('edit');
     });
