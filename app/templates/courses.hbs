@@ -1,1 +1,15 @@
-{{outlet}}
+<ol class="breadcrumb">
+  <li class="active">Courses</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="list-group">
+          {{link-to 'My Courses' 'courses.mine' class="list-group-item" }}
+          {{link-to 'Edit Material' 'courses.materials' class="list-group-item" }}
+          {{link-to 'All Courses' 'courses.all' class="list-group-item" }}
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        {{outlet}}
+    </div>
+</div>
