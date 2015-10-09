@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('messages', function() {
     this.route('new');
   });
+  this.route('message');
   this.route('thread');
   this.route('settings', function() {
     this.route('account');

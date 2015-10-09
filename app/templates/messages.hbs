@@ -1,1 +1,36 @@
-{{outlet}}
+<ol class="breadcrumb">
+  <li class="active">Messages</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item">New Message</a>
+          <a href="#" class="list-group-item active">Received</a>
+          <a href="#" class="list-group-item">Sent</a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class="card">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-xs-12">Received</div>
+                </div>
+                <hr>
+                {{#each model as |message|}}
+                    <div class="row m-t">
+                        <div class="col-xs-12">
+                            <h5>{{link-to message.title 'message'}}</h5>
+                            <div class="media">
+                              <div class="media-body">
+                                <h6><em>over 1 year ago, 3 replies</em></h6>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
