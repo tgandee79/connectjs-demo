@@ -42,6 +42,14 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self' ", // Allow scripts from https://cdn.mxpnl.com
+    'font-src': "'self'", // Allow fonts to be loaded from http://fonts.gstatic.com
+    'connect-src': "'self' ws://localhost:49152",
+    'img-src': "'self' http://placehold.it https://placeholdit.imgix.net",
+    'style-src': "'self' 'unsafe-inline'", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    'media-src': "'self'"
+  }
   return ENV;
 };

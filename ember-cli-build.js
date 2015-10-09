@@ -13,8 +13,9 @@ module.exports = function(defaults) {
     }
   });
   app.import(bowerBootstrap + '/collapse.js');
+  app.import(bowerBootstrap + '/dropdown.js');
   app.import(bowerBootstrap + '/transition.js');
-
+  app.import('vendor/lorem/lorem.js');
 
   return app.toTree();
 };
