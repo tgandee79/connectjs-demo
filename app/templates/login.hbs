@@ -19,8 +19,8 @@
                           <input type="password" id="exampleInputPassword1" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
                         </div>
                     </fieldset>
-                    <button class="btn btn-block btn-primary" type="submit">Login</button>
-                    <a href="/forgot-password" class="btn btn-block btn-link btn-primary">Forgot Password?</a>
+                    {{#link-to 'courses' class="btn btn-block btn-primary"}}Login{{/link-to}}
+                    {{#link-to 'courses' class="btn btn-block btn-link"}}Forgot Password?{{/link-to}}
                 </form>
               </div>
             </div>

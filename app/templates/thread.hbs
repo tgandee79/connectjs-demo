@@ -1,5 +1,6 @@
 <ol class="breadcrumb">
-  <li class="active">Topics</li>
+  <li>{{link-to "Topics" "topics"}}</li>
+  <li class="active">{{ipsum-text range="1-4" structure="w"}}</li>
 </ol>
 <div class="row">
     <div class="col-xs-12 col-md-4">
@@ -50,68 +51,42 @@
         </div>
     </div>
     <div class="col-xs-12 col-md-8">
-        <ul class="list-group">
-          <li class="list-group-item p-y-sm">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
+        <div class="card">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10">Thread</div>
+                    <div class="col-xs-12 col-sm-2">Status</div>
                 </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
-                </div>
+                <hr>
+                {{#each model as |topic|}}
+                    <div class="row m-t">
+                        <div class="col-xs-12 col-sm-10">
+                            <h5>{{link-to topic.title 'topics.topic'}}</h5>
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img class="media-object img-circle" src="http://placehold.it/25x25" alt="Generic placeholder image">
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h6><em>over 1 year ago, 3 replies</em></h6>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-2">
+                            {{#if topic.has_user}}
+                                <a href="#">
+                                  <img class="media-object img-circle" src="http://placehold.it/55x55" alt="Generic placeholder image">
+                                </a>
+                            {{else}}
+                                <h5>Open</h5>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <hr>
+                {{/each}}
             </div>
-          </li>
-          <li class="list-group-item">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
-                </div>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
-                </div>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
-                </div>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-primary btn-block"}}Subscribe{{/link-to}}
-                </div>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="row row-xs-center">
-                <div class="col-xs-12 col-sm-9">
-                    {{#link-to 'thread' class="h4"}}Topic Thread Title{{/link-to}}
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    {{#link-to 'thread' class="btn btn-secondary btn-block"}}Unsubscribe{{/link-to}}
-                </div>
-            </div>
-          </li>
-        </ul>
+        </div>
     </div>
 </div>
 
