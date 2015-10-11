@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function ispumText(params, hash) {
+export function ipsumText(params, hash) {
   // hash should have range, count, capitalize, structure (p,s,w) for paragraph, sentence, word
   var lorem = new window.Lorem();
   var count = 0;
@@ -24,4 +24,4 @@ export function ispumText(params, hash) {
   return text;
 }
 
-export default Ember.Helper.helper(ispumText);
+export default Ember.Helper.helper(ipsumText);
