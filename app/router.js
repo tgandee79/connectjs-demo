@@ -28,6 +28,19 @@ Router.map(function() {
     this.route('password');
   });
   this.route('profile');
+  this.route('bootstrap', function(){
+    this.route('grid');
+    this.route('media-block');
+    this.route('table');
+    this.route('buttons');
+    this.route('forms');
+    this.route('cards');
+    this.route('alerts');
+    this.route('utilities');
+    this.route('type');
+    this.route('spacing');
+  });
+
 });
 
 export default Router;
