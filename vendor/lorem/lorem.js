@@ -36,7 +36,7 @@ var Lorem;
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
     //text creator method with parameters: how many, what
-    Lorem.prototype.createText = function(count, type) {
+    Lorem.prototype.createText = function(count, type, classNames) {
         switch (type) {
             //paragraphs are loads of sentences.
             case Lorem.TYPE.PARAGRAPH:
@@ -44,7 +44,7 @@ var Lorem;
                 for (var i = 0; i < count; i++) {
                     var paragraphLength = this.randomInt(10, 20);
                     var paragraph = this.createText(paragraphLength, Lorem.TYPE.SENTENCE);
-                    paragraphs.push('<p>'+paragraph+'</p>');
+                    paragraphs.push('<p class="'+ classNames +'">'+paragraph+'</p>');
                 }
                 return paragraphs.join('\n');
                 break;

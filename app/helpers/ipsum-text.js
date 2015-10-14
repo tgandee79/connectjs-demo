@@ -6,6 +6,7 @@ export function ipsumText(params, hash) {
   var count = 0;
   var hashrange = hash.range;
   var loremtype = window.Lorem.TYPE.PARAGRAPH;
+  var classNames = hash.classNames;
   if (hash.range){
     var range = hashrange.split("-");
     count = Math.floor(Math.random() * parseInt(range[1])) + parseInt(range[0]);
@@ -17,11 +18,11 @@ export function ipsumText(params, hash) {
   } else if (/w/.test(hash.structure)) {
     loremtype = window.Lorem.TYPE.WORD;
   }
-  var text = lorem.createText(count, loremtype);
+  var text = lorem.createText(count, loremtype, classNames);
   if(hash.capitalize){
     text = Ember.String.capitalize(text);
   }
-  return text;
+  return new Ember.Handlebars.SafeString(text);
 }
 
 export default Ember.Helper.helper(ipsumText);
