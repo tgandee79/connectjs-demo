@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-block">
+    {{#each model as |course|}}
+      <div class="p-y">
+        <strong>{{link-to course.title 'courses.materials.edit'}}</strong>
+      </div>
+    {{/each}}
+  </div>
+</div>

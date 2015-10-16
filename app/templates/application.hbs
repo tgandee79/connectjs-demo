@@ -1,3 +1,41 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar bg-faded">
+    <div class="container">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">&#9776;
+        </button>
+        {{#link-to 'login' class="navbar-brand"}}Nerd Association{{/link-to}}
+        <div class="dropdown navbar-brand pull-right">
+            <a data-target="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="http://placehold.it/30x30" alt="" class="img-circle">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                {{link-to "Profile" "profile" class="dropdown-item"}}
+                {{link-to "Settings" "settings.account" class="dropdown-item"}}
+            </div>
+        </div>
 
-{{outlet}}
+        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    {{#link-to "courses" class="nav-link"}}Courses{{/link-to}}
+                </li>
+                <li class="nav-item">
+                    {{#link-to "topics" class="nav-link"}}Topics{{/link-to}}
+                </li>
+                <li class="nav-item">
+                    {{#link-to "messages" class="nav-link"}}Messages{{/link-to}}
+                </li>
+                <li class="nav-item">
+                    {{#link-to "bootstrap" class="nav-link"}}Bootstrap-Elements{{/link-to}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="m-t">
+        {{outlet}}
+    </div>
+</div>
+
+
+

@@ -1,0 +1,10 @@
+{{#each filteredCourses as |course|}}
+  <div class="card">
+      {{#link-to 'course'}}
+          <div class="card-block">
+              <h4 class="card-title">{{course.title}}</h4>
+              <p class="card-text">{{course.desc}}</p>
+          </div>
+      {{/link-to}}
+  </div>
+{{/each}}

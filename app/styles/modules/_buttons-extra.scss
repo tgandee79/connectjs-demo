@@ -1,0 +1,20 @@
+//
+// Alternate buttons
+//
+
+.btn-rainbow {
+  @include gradient-horizontal-three-colors($brand-primary, $brand-info , 50%, $brand-danger);
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y * 4, $btn-padding-x * 4, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+
+
+

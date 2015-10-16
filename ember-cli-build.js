@@ -2,7 +2,8 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var bootstrapPath = "vendor/bootstrap/";
+  var bootstrapPath = "bower_components/bootstrap/";
+  var bowerBootstrap = "bower_components/bootstrap/dist/js";
   var app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
@@ -11,7 +12,8 @@ module.exports = function(defaults) {
       ]
     }
   });
-  // app.import(bootstrapPath + 'js/[module].js');
+  app.import(bowerBootstrap + '/bootstrap.min.js');
+  app.import('vendor/lorem/lorem.js');
 
   return app.toTree();
 };

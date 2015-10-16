@@ -1,0 +1,92 @@
+<ol class="breadcrumb">
+  <li>{{link-to "Topics" "topics"}}</li>
+  <li class="active">{{ipsum-text range="1-4" structure="w"}}</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Go!</button>
+              </span>
+            </div>
+        </form>
+        <div class="card m-t-md">
+            <div class="card-block">
+                <div class="row row-xs-center">
+                    <h4 class="card-title m-l">Respected Elders</h4>
+                </div>
+                <div class="row row-xs-center">
+                    <img src="http://placehold.it/30x30" alt="avatar image" class="img-circle m-l">
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+                <div class="row row-xs-center">
+                    <img src="http://placehold.it/30x30" alt="avatar image" class="img-circle m-l">
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+                <div class="row row-xs-center">
+                    <img src="http://placehold.it/30x30" alt="avatar image" class="img-circle m-l">
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+                <div class="row row-xs-center">
+                    <img src="http://placehold.it/30x30" alt="avatar image" class="img-circle m-l">
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+                <div class="row row-xs-center">
+                    <img src="http://placehold.it/30x30" alt="avatar image" class="img-circle m-l">
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+            </div>
+        </div>
+        <div class="card m-t-md">
+            <div class="card-block">
+                <div class="row row-xs-center">
+                    <h4 class="card-title m-l">Related Links</h4>
+                </div>
+                <div class="row row-xs-center">
+                    <a href="#" class="m-l">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class="card">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10">Thread</div>
+                    <div class="col-xs-12 col-sm-2">Status</div>
+                </div>
+                <hr>
+                {{#each model as |topic|}}
+                    <div class="row m-t">
+                        <div class="col-xs-12 col-sm-10">
+                            <h5>{{link-to topic.title 'topics.topic'}}</h5>
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img class="media-object img-circle" src="http://placehold.it/25x25" alt="Generic placeholder image">
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h6><em>over 1 year ago, 3 replies</em></h6>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-2">
+                            {{#if topic.has_user}}
+                                <a href="#">
+                                  <img class="media-object img-circle" src="http://placehold.it/55x55" alt="Generic placeholder image">
+                                </a>
+                            {{else}}
+                                <h5>Open</h5>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <hr>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
