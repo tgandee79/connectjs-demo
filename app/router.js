@@ -39,6 +39,7 @@ Router.map(function() {
     this.route('utilities');
     this.route('type');
     this.route('spacing');
+    this.route('tables');
   });
 
 });
